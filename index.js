@@ -74,7 +74,11 @@ client.connect(err => {
         res.send(documents)
       })
     })
-
+    app.get('/', (req,res)=>{
+      
+        res.send("db worked successfully")
+      })
+    })
     app.get('/tasks', (req,res)=>{
       tasksCollection.find({})
       .toArray((err,documents)=>{
