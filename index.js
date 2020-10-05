@@ -74,10 +74,10 @@ client.connect(err => {
         res.send(documents)
       })
     })
-    app.get('/', (req,res)=>{
+  app.get('/events', (req,res)=>{
+     
+        res.send('db worked successfully')
       
-        res.send("db worked successfully")
-      })
     })
     app.get('/tasks', (req,res)=>{
       tasksCollection.find({})
